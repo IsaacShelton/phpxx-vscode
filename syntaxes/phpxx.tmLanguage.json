@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PHP++",
+	"patterns": [
+		{"include": "#meta-directives"},
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#line-comments"},
+		{"include": "#hash-line-comments"},
+		{"include": "#block-comments"},
+		{"include": "#single-quote-strings"},
+		{"include": "#language-constants"},
+		{"include": "#variables"},
+		{"include": "#numeric"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.phpxx",
+				"match": "\\b(echo|function|if|while|else|throw|void)\\b"
+			}]
+		},
+		"language-constants": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "\\b(arr|dict|str|num|count|repr|get|push|pop|eq|lt|gt|neq|lte|gte|args|dupe|collection|clear|something|nothing|not|bool|xor|and|or|neither|either|none|any)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "entity.name.function.preprocessor.phpxx",
+				"match": "\\$[a-zA-Z0-9_]*\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.phpxx",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.phpxx",
+					"match": "\\\\."
+				}
+			]
+		},
+		"single-quote-strings": {
+			"name": "string.quoted.single.phpxx",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.phpxx",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+				}
+			]
+		},
+		"line-comments": {
+			"name": "comment.line.double-slash.phpxx",
+			"begin": "//",
+			"end": "$\n?"
+		},
+		"hash-line-comments": {
+			"name": "comment.line.single-hash.phpxx",
+			"begin": "#",
+			"end": "$\n?"
+		},
+		"block-comments": {
+			"name": "comment.line.block.phpxx",
+			"begin": "/\\*",
+			"end": "\\*/"
+		}
+	},
+	"scopeName": "source.phpxx",
+	"foldingStartMarker": "{*$",
+	"foldingStopMarker": "^*}"
+}
