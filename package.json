@@ -2,7 +2,7 @@
     "name": "phpxx-language",
     "displayName": "PHP++/PHPxx language",
     "description": "PHP++/PHPxx language support for VS Code",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "DockySoft",
     "engines": {
         "vscode": "^1.41.0"
