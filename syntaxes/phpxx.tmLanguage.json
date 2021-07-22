@@ -23,7 +23,7 @@
 		"language-constants": {
 			"patterns": [{
 				"name": "constant.numeric",
-				"match": "\\b(arr|dict|str|num|count|repr|get|push|pop|eq|lt|gt|neq|lte|gte|args|dupe|collection|clear|something|nothing|not|bool|xor|and|or|neither|either|none|any|readline)\\b"
+				"match": "\\b(arr|dict|str|num|count|repr|get|push|pop|eq|lt|gt|neq|lte|gte|args|dupe|collection|clear|something|nothing|not|bool|xor|and|or|neither|either|none|any|readline|aka|up|down)\\b"
 			}]
 		},
 		"variables": {
